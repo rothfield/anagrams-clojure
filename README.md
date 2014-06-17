@@ -2,9 +2,11 @@
 
 Find anagrams using Clojure
 
-## Command Line Usage
+## Usage
 
-lein run URI
+git clone https://github.com/rothfield/anagrams-clojure
+cd anagrams-clojure
+lein run 
 
 If not passed a URI uses "http://www.puzzlers.org/pub/wordlists/unixdict.txt"
 URI can be http or file
