@@ -1,8 +1,8 @@
-# anagrams_clojure
+## anagrams_clojure
 
 Find anagrams using Clojure
 
-## Usage
+### Usage
 
 git clone https://github.com/rothfield/anagrams-clojure
 cd anagrams-clojure
@@ -11,7 +11,7 @@ lein run
 If not passed a URI uses "http://www.puzzlers.org/pub/wordlists/unixdict.txt"
 URI can be http or file
 
-## Things I learned.
+### Things I learned.
  Use group-by rather than coding group-by functionality yourself!
 
  Use reader rather than slurp for scalability
