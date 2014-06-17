@@ -52,11 +52,13 @@
     (anagrams ["crooner" "coroner" "croon"])
     )
   (println (take 20 (anagrams (build-dict default-dict-URI))))
+  (println (take 30 (-main)))
+  (println (take 10 (-main "/usr/share/dict/american-english")))
   )
 
 
 (defn -main[& args]
-  "Given a file or http URI, generate lists of permutations to stdout"
+  "Given a file or http URI, generate lists of anagrams to stdout"
   (let [my-dict-URI 
         (if (empty? args)
           (do (println "Using " default-dict-URI)
