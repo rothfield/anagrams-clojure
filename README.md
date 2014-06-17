@@ -4,9 +4,10 @@ Find anagrams using Clojure
 
 ## Command Line Usage
 
-lein run <URI>
+lein run URI
 
 If not passed a URI uses "http://www.puzzlers.org/pub/wordlists/unixdict.txt"
+URI can be http or file
 
 ## Things I learned.
  Use group-by rather than coding group-by functionality yourself!
