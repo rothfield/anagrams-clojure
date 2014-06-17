@@ -11,10 +11,15 @@ URI can be http or file
 
 ## Things I learned.
  Use group-by rather than coding group-by functionality yourself!
+
  Use reader rather than slurp for scalability
+
  Can use line-seq instead of split
+
  java.io/reader works with both http and file uris
+
  To get command line app, include gen-clss in the ns declaration
+
  main has signature
  ;;(defn -main[& args] body)
 
