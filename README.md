@@ -16,9 +16,9 @@ URI can be http or file
 
  Can use line-seq instead of split
 
- java.io/reader works with both http and file uris
+ java.io/reader works with both http and file URIs
 
- To get command line app, include gen-clss in the ns declaration
+ To get command line app, include gen-class in the ns declaration
 
  main has signature
  ;;(defn -main[& args] body)

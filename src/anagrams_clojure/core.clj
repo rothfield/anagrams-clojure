@@ -5,7 +5,7 @@
 ;; group-by rather than coding group-by
 ;; Use reader rather than slurp for scalability
 ;; Can use line-seq instead of split
-;; java.io/reader works with both http and file uris
+;; java.io/reader works with both http and file URIs
 ;; To get command line app, include gen-clss in the ns declaration
 ;; main has signature
 ;;(defn -main[& args]
@@ -29,16 +29,16 @@
                  ))))
 
 
-(def default-dict-uri
+(def default-dict-URI
   "http://www.puzzlers.org/pub/wordlists/unixdict.txt"
   ;"/usr/share/dict/american-english"
   )
 
-(defn build-dict[my-uri]
-  "Return lazy list of the alpha words in the uri"
+(defn build-dict[my-URI]
+  "Return lazy list of the alpha words in the URI"
   (filter #(re-matches #"[a-z]+" %)
           (->
-            my-uri
+            my-URI
             clojure.java.io/reader
             line-seq 
             ))) 
@@ -51,15 +51,15 @@
   (println
     (anagrams ["crooner" "coroner" "croon"])
     )
-  (println (take 20 (anagrams (build-dict default-dict-uri))))
+  (println (take 20 (anagrams (build-dict default-dict-URI))))
   )
 
 
 (defn -main[& args]
   "Given a file or http URI, generate lists of permutations to stdout"
-  (let [my-dict-uri 
+  (let [my-dict-URI 
         (if (empty? args)
-          (do (println "Using " default-dict-uri)
-              default-dict-uri)
+          (do (println "Using " default-dict-URI)
+              default-dict-URI)
           (first args))]
-    (println (anagrams (build-dict my-dict-uri)))))
+    (println (anagrams (build-dict my-dict-URI)))))
